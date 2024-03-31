@@ -1,3 +1,6 @@
+# N - Queens 문제
+# https://www.acmicpc.net/problem/9663
+
 import sys
 
 n = int(sys.stdin.readline())
