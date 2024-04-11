@@ -4,7 +4,7 @@ listLen, minSum = map(int, sys.stdin.readline().split())
 permutation = list(map(int, sys.stdin.readline().split()))
 
 front = 0
-rear = 0 
+rear = 0
 partSum = 0
 count = 0
 result = []
@@ -19,7 +19,5 @@ while(front != listLen):
     partSum -= permutation[front]
     front += 1
 
-if not result:
-    print(0)
-else:
-    print(min(result))
+if not result: print(0)
+# else: print(min(result))
