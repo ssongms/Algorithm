@@ -14,15 +14,12 @@ else:
     accDay = 0
     while startYear != endYear or startMonth != endMonth:
         if startMonth == 2: # 2월이면 해당 년도가 윤년인지 검사
-            if isLeapYear(startYear):
-                accDay += 29
-            else:
-                accDay += maxDay[startMonth]
-        else:
-            accDay += maxDay[startMonth]
+            if isLeapYear(startYear): accDay += 29
+            else: accDay += maxDay[startMonth]
+        else: accDay += maxDay[startMonth]
         
-        startMonth += 1
-        if startMonth == 13:
+        startMonth += 1 # 한 달 증가
+        if startMonth == 13: # 13월이 되면 1월로 바꿔주고 년도 1 증가
             startMonth = 1
             startYear += 1
     

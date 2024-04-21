@@ -11,7 +11,7 @@ for line in satellite:
     for num in checkNum:
         if reverseLine.find(num) != -1:
             distance[int(num)-1] = reverseLine.find(num)
-            break # 시간 단축을 위해 찾으면 바로 break
+            break # 시간 단축을 위해 로직이 끝났으면 바로 break
 
 sortedDistanceList = sorted(list(set(distance))) # 중복 제거 & 정렬
 for i in range(len(sortedDistanceList)):

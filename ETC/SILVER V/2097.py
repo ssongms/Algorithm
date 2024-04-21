@@ -11,4 +11,4 @@ else:
         N -= sqrtN
         height += 1
         if N <= sqrtN: break 
-    print((height+width)*2) # 사각형의 둘레
+    print((height+width)*2) # 직사각형의 둘레
