@@ -75,7 +75,7 @@ def findStart():
                 return i, j # 바로 리턴함으로써 시간 단축
 
 startX, startY = findStart()
-result = bfs(startX, startY)
+result = bfs(startX, startY) # 현재 'I' 위치에서 BFS 시작
 
 if result == 0:
     print("TT")
