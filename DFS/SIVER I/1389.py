@@ -4,7 +4,6 @@ from collections import deque
 N, M = map(int, sys.stdin.readline().split())
 adjGraph = [[0 for _ in range(N+1)] for _ in range(N+1)]
 
-
 def kevinBacon(N, adj):
     kevin = [[0 for _ in range(N+1)] for _ in range(N+1)]
     for i in range(N+1):
