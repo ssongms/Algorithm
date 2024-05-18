@@ -14,7 +14,7 @@ def birusSpread(startPC):
     global birus
     visited[startPC] = True # 현재 컴퓨터를 방문 Mark
     for endPC in range(1, computer+1): # 1번 컴퓨터부터 마지막 컴퓨터까지 확인
-        if topology[startPC][endPC] == 1 and not visited[endPC]: # 방문한 적이 없고,토폴로지 상 이어져 있다면
+        if topology[startPC][endPC] == 1 and not visited[endPC]: # 토폴로지에서 이어져 있는 PC인데, 방문한 적이 없다면
             birus += 1
             birusSpread(endPC) # 재귀 호출
 

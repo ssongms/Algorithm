@@ -7,7 +7,7 @@ arr = list(map(int, input().split()))
 branch = []
 result = []
 visited = [False] * N
-arr.sort()
+# arr.sort()
 
 def isIndescending(): # branch 배열이 비오름차순인지 확인하는 함수 정의
     for i in range(1, len(branch)): # branch에 원소가 하나일 때는 검사하지 않도록 for문을 1부터 len(branch)-1 까지로 설정
@@ -32,7 +32,7 @@ def backtracking():
                 visited[idx] = False # 마찬가지로 다시 방문 가능하게 만듦
             else:
                 branch.pop() # 비오름차순이 아니기 때문에 추가했던 element를 pop해서 아무일도 없던 것으로 만듦
-
+    
 backtracking()
 for res in result: # 결과 출력
     print(res)
