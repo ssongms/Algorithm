@@ -36,3 +36,5 @@ if dp[N] == 1:
     print("SK")
 elif dp[N] == 2:
     print("CY")
+
+# test
