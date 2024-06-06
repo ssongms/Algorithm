@@ -7,7 +7,7 @@ BLUE, WHITE = 1, 0
 blueCount, whiteCount = 0, 0
 
 # 시작 x, y를 전달 & 크기(N)를 전달
-def devide(x, y, N):
+def divide(x, y, N):
     global blueCount, whiteCount
     x1, y1 = x, y
     x2, y2 = x1+N, y1
@@ -26,7 +26,7 @@ def devide(x, y, N):
     elif localWhiteCount == 0:
         blueCount += 1
     else:
-        devide(x1, y1, N//2)
+        divide(x1, y1, N//2)
     
     localBlueCount, localWhiteCount = 0, 0
     for i in range(N): # 1사분면
@@ -40,7 +40,7 @@ def devide(x, y, N):
     elif localWhiteCount == 0:
         blueCount += 1
     else:
-        devide(x2, y2, N//2)
+        divide(x2, y2, N//2)
 
     localBlueCount, localWhiteCount = 0, 0
     for i in range(N): # 1사분면
@@ -54,7 +54,7 @@ def devide(x, y, N):
     elif localWhiteCount == 0:
         blueCount += 1
     else:
-        devide(x3, y3, N//2)
+        divide(x3, y3, N//2)
 
     localBlueCount, localWhiteCount = 0, 0
     for i in range(N): # 1사분면
@@ -68,7 +68,7 @@ def devide(x, y, N):
     elif localWhiteCount == 0:
         blueCount += 1
     else:
-        devide(x4, y4, N//2)
+        divide(x4, y4, N//2)
 
 
 
@@ -81,6 +81,6 @@ elif 1 not in (n for row in colorPaper for n in row):
     print(0)
 
 else:
-    devide(0, 0, N//2)
+    divide(0, 0, N//2)
     print(whiteCount)
     print(blueCount)
